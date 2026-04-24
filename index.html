@@ -36,8 +36,19 @@ iframe {
 </head>
 
 <body>
-  <div class="screen">
-    <iframe src="https://www2.edam.ne.jp/Public/00642/Sokutei/SSC/RN#"></iframe>
-  </div>
+<div class="screen">
+  <iframe id="target"></iframe>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const url = params.get("url");
+
+const defaultUrl = "https://www2.edam.ne.jp/Public/00642/Sokutei/SSC/RN#";
+
+document.getElementById("target").src = url || defaultUrl;
+</script>
+
 </body>
+</html>
 </html>
